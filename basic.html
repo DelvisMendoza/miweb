@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+
+  <script>
+    //------var or let --------
+    // var hola = "Hola Mundo";
+    // let hello = "Hello World";
+    // console.log(hola);
+    // console.log(hello);
+    //ambito de bloque
+
+    // let musica = "rock";
+    // console.log("muestrame la variable", musica);
+    // {
+    //   let musica = "pop";
+    //   console.log("muestrame esta variable", musica);
+    // }
+    // console.log(musica);
+
+    //----------const--------
+
+    // const PI = 3.14159;
+    // console.log(PI);
+
+    // const objeto = {
+    //   nombre: " Delvis",
+    //   edad: 25
+    // }
+
+    // const colores = ["azul, verde, negro, rojo"
+    // ];
+
+    // console.log(colores);
+    // console.log(objeto);
+
+    // objeto.corre = "delvis@gmail.com";
+    // colores.push = "marron";
+    // console.log(colores);
+    // console.log(objeto);
+
+    //-------strings-----------
+    //Cadenas de texto strings
+
+    // let nombre = "pete";
+    // let apellido = " hausem";
+    // let lorem = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora vitae quam ullam perferendis sequi doloremque totam cum modi officia, dolorem, placeat possimus autem recusandae. Voluptatibus sit consequuntur modi illum! Ex!"
+
+    // console.log(nombre, apellido);
+
+    // console.log(nombre.lenght, apellido.length,
+    //   nombre.toUpperCase(),
+    //   apellido.toLowerCase(),
+    //   lorem.split(),
+    //   lorem.trim()
+    // );
+
+    // let nombre = "Pete";
+    // let apellido = "Hausem";
+    //------template string---- interpolacion
+
+    //     let saludo = `Hola mi nombre es ${nombre} ${apellido}.`;
+    //     console.log(saludo);
+
+    //     let ul = `
+    //   <ul>
+    //     <li>Rango</li>
+    //     <li>Magia</li>
+    //     <li>Melee</li>
+    //   </ul>
+    // `;
+
+    //     console.log(ul);
+
+    //----numbers----
+
+    // let a = 1
+    // let b = 2
+
+    // console.log(a + b);
+
+    //----booleans----
+
+    // let verdadero = true;
+    // let falso = false;
+
+    // console.log(verdadero, falso);
+
+
+    //----null, undefined, NaN-----
+
+    // let indefinida;
+    // console.log(indefinida);
+    // let nulo = null;
+    // console.log(nulo);
+
+    // let noEsUnNumero = "hola" * 552.25;
+    // console.log(noEsUnNumero);
+
+    //------function--------
+    //funcion declarada
+
+    // function estoEsUnaFuncion() {
+    //   console.log("Uno");
+    //   console.log("Dos");
+    //   console.log("Tres");
+    // }
+
+    //invocacion de funciones
+
+    // function saludar(nombre, edad) {
+    //   console.log(`Hola mi nombre es ${nombre}, y tengo ${edad} años`);
+
+    // }
+    // saludar("Pete", 25)
+
+    // //funciones declaradas vs funciones expresadas
+
+    // function funcionDeclarada() {
+    //   console.log("esto es una funcion declarada puede invocarse en cualquier parte de nuestro codigo incluso antes de que la funcion sea declarada");
+
+    // }
+    // funcionDeclarada();
+
+    // const funcionExpresada = function () {
+    //   console.log("esto va a ser una funcion expresada por una variable");
+    // }
+
+
+    // funcionExpresada()
+
+    //----Arra----
+
+    // const a = ["Hola mundo", false, 1, 2, 8];
+
+    // console.log(a);
+
+    // console.log(a[2]);
+
+    // const colores = ["Verde", "Amarillo", "Rojo"];
+
+    // console.log(colores)
+
+    // colores.forEach(function (el, index) {
+    //   console.log(`<li id="${index}">${el}</li>`);
+
+    // });
+
+
+    //----Objects---
+
+    // const pete = {
+    //   nombre: "Delvis",
+    //   apellido: "Mendoza",
+    //   edad: 25,
+    //   hobbies: ["Trabajar", "Estudiar", "Mas Trabajo"],
+    //   soltero: false,
+    //   contacto: {
+    //     email: "delvismendozaj@gmail.com",
+    //     wsp: 3017945025,
+    //     twitter: "@delvismendoza",
+    //   },
+
+    //   saludo: function () {
+    //     console.log(`Delvis te saluda`)
+
+    //   },
+
+
+
+
+    // }
+
+    // console.log(pete);
+
+    //----Tipos de Operadores----
+
+    // console.log(8 === 8) || ("8" === 8);
+
+    //---condicionales ----
+
+    // let dinero = 1000;
+    // if (1000 >= 100) {
+    //   console.log("mayor valor");
+    // } else {
+    //   console.log("menor valor");
+
+    // }
+
+    // //--- operador ternario---
+
+    // let edad = 6;
+
+    // let eresMenor = (edad > 18) ? "Eres mayor de edad" : "Eres menor de edad";
+
+    // console.log(eresMenor);
+
+
+    // let eresMayor = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+
+    // console.log(eresMayor);
+
+    //---loops---
+
+    // let contador = 0;
+    // while (contador < 10) {
+    //   console.log(contador);
+    //   contador++;
+    // }
+
+    // for (let a = 0; a < 9; a++) {
+    //   console.log(a);
+    // }
+
+    // let cantidad = [12, 16, 11, 85, 14, 20];
+    // for (let a = 0; a < cantidad.length; a++) {
+    //   console.log(cantidad[a]);
+    // }
+
+    // const pete = {
+    //   nombre: "Delvis",
+    //   apelldio: "Mendoza",
+    //   edad: 25,
+    // }
+
+    // for (const key in pete) {
+    //   console.log(`propiedad:${key}, value:${pete[key]}`);
+    // };
+
+    // for (const elemento of cantidad) {
+    //   console.log(elemento);
+
+    // }
+
+
+    // let f = new Number(5)
+
+    // const a = (valor) => {
+    //   try {
+
+    //     aaaa
+    //     if (valor !== 33) {
+    //       return console.log(" error  no introduciste un valor correcto")
+    //     } else {
+    //       console.log(` hola me llamo ${nombre}`)
+    //     }
+
+
+    //   } catch (error) {
+    //     console.log(error);
+
+    //   }
+
+
+    // }
+
+    // a(f)
+
+    // function name(params) {
+
+    // }
+    //----- destructuraciones----
+
+
+    //   let piña = 1
+    //   let pera = 2
+    //   let manza = 3
+    //   let naranja = 4
+    //   let durazno = 5
+    //   const cv = {
+    //     nombre: "pete",
+    //     apellido: "mendoza",
+    //     edad: 22,
+    //     email: "delvis@gmail.com"
+    //   };
+    //   let apelildo = cv.apellido
+    //   let nombre = cv.nombre
+
+    //   console.log({ nombre: nombre, apellido: cv.apellido });
+
+    //---- objetos literales-----
+
+    // const perro = {
+    //   nombre: "Homero",
+    //   edad: 2,
+    //   ladrar: function () {
+    //     console.log("guauu guauuu!");
+
+    //   }
+    // }
+    // console.log(perro);
+    // perro.ladrar();
+
+    // let nombre = "homero"
+    // let raza = "callejero"
+    // let edad = 2
+
+    // const perro = {
+    //   nombre, edad, raza, color: "beige",
+    //   ladrar() {
+
+    //     console.log("guauu guauu guauu!!!");
+    //   }
+    // }
+    // console.log(perro);
+    // perro.ladrar()
+
+    //-----parametros rest y  operador spread js---
+
+    // function sumar(a, b, ...c) {
+    //   let resultado = a + b;
+
+    //   c.forEach(function (n) {
+    //     resultado += n
+    //   });
+    //   return resultado;
+    // };
+
+    // console.log(sumar(55, 87));
+    // console.log(sumar(1, 2, 2, 2, 2, 2));
+
+    // const arr1 = [1, 2, 3, 4, 5],
+    //   arr2 = [6, 7, 8, 9, 0];
+
+    // console.log(arr1, arr2);
+
+    // const arr3 = [...arr1, ...arr2];
+    // console.log(arr3);
+
+    //---- arrow function----
+
+    // const saludar = nombre => {
+    //   console.log(`hola ${nombre}`)
+    // }
+    // saludar("pete")
+
+
+    // const sumar = (a, b) => a + b;
+    // console.log(sumar(55, 2))
+
+    //Prototipos
+
+    //funcion constructora
+
+    // function Animal(nombre, genero) {
+    //   //atributos
+    //   this.nombre = nombre;
+    //   this.genero = genero;
+
+    //   //metodos
+
+    //   this.sonar = function () {
+    //     console.log("Hago sonido porque estoy vivo");
+
+    //   }
+    // }
+
+    // const snoopy = new Animal("snoopy", "Macho"),
+    //   bugsBunny = new Animal("bugs bunny", "Macho");
+
+    // console.log(bugsBunny);
+    // console.log(snoopy);
+
+
+    // funcion constructora donde asignamos los metodos al prototipo y no a la funcion como tal
+
+    // function Animal(nombre, genero) {
+    //   this.nombre = nombre;
+    //   this.genero = genero;
+
+    // }
+
+    //metodo agregados al prototipo de la funcion constructora
+
+    // Animal.prototype.sonar = function () {
+    //   console.log("hago sonido porque estoy vivo");
+
+    // }
+
+    // Animal.prototype.saludar = function () {
+
+    //   console.log(`Hola me llamo ${this.nombre}`);
+    // }
+
+    // const snoopy = new Animal("Snoopy", "Macho"),
+    //   bugsBunny = new Animal("Bugs Bunny", "Macho");
+
+    // console.log(snoopy);
+    // console.log(bugsBunny);
+
+    // snoopy.sonar()
+    // snoopy.saludar()
+
+    // bugsBunny.sonar()
+    // bugsBunny.saludar()
+
+    //-----CLASES-----
+
+    // class Animal {
+
+    //   constructor(nombre, genero) {
+    //     this.nombre = nombre;
+    //     this.genero = genero;
+    //   }
+    //   sonar() {
+    //     console.log("hago sonidos porque estoy vivo");
+
+    //   }
+    //   saludar() {
+    //     console.log(`Hola me llamo ${this.nombre}`);
+    //   }
+    // }
+    // class Perro extends Animal {
+    //   constructor(nombre, genero, tamanio) {
+    //     super(nombre, genero);
+    //     this.tamanio = tamanio;
+    //   }
+    //   ladrar() {
+    //     console.log("guauu Guauu");
+    //   }
+    //   sonar() {
+    //     console.log("soy un pero y mi sonido es un ladrido");
+    //   }
+    // }
+    // const mimi = new Animal("Mimi", "Hembra"),
+    //   scooby = new Perro("Scooby", "Macho", "Gigante");
+
+    // console.log(mimi);
+    // console.log(scooby);
+    // mimi.saludar();
+    // mimi.sonar();
+    // scooby.saludar();
+    // scooby.sonar();
+    // scooby.ladrar();
+
+
+    //----Metodo estatico ----
+
+    // class Animal {
+
+    //   constructor(nombre, genero) {
+    //     this.nombre = nombre;
+    //     this.genero = genero;
+    //     this.raza = null;
+    //   }
+    //   sonar() {
+    //     console.log("hago sonidos porque estoy vivo");
+
+    //   }
+    //   saludar() {
+    //     console.log(`Hola me llamo ${this.nombre}`);
+    //   }
+    // }
+    // class Perro extends Animal {
+    //   constructor(nombre, genero, tamanio) {
+    //     super(nombre, genero);
+    //     this.tamanio = tamanio;
+    //   }
+    //   ladrar() {
+    //     console.log("guauu Guauu");
+    //   }
+    //   sonar() {
+    //     console.log("soy un pero y mi sonido es un ladrido");
+    //   }
+    //   //estatico
+
+    //   static queEres() {
+    //     console.log("Mi nombre es TOM y soy un perro casador");
+    //   }
+    //   get getRaza() {
+    //     return this.raza;
+    //   }
+
+    //   set setRaza(raza) {
+    //     this.raza = raza;
+    //   }
+
+    // }
+
+    // Perro.queEres();
+    // const mimi = new Animal("Mimi", "Hembra"),
+    //   scooby = new Perro("Scooby", "Macho", "Gigante");
+
+    // console.log(mimi);
+    // console.log(scooby);
+    // mimi.saludar();
+    // mimi.sonar();
+    // scooby.saludar();
+    // scooby.sonar();
+    // scooby.ladrar();
+    // console.log(scooby.getRaza);
+    // scooby.setRaza = "Gran Danes";
+    // console.log(scooby.getRaza);
+
+
+    //----- Operador cortocircuito ----
+
+    //---- Expresiones regulares -----
+
+    // let cadena = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, facere quaerat. Impedit exercitationem voluptas dolores, nobis veniam architecto quos voluptatibus reiciendis doloribus! Nesciunt, aliquam non numquam hic nisi vero modi dolorem."
+
+    // // let expReg = new RegExp("Lorem", "");
+    // let expReg2 = /lorem/ig;
+
+    // console.log(expReg2.test(cadena));
+    // console.log(expReg2.exec(cadena));
+
+
+    //----- funciones anonimas autoejecutables ----
+
+    //clasica
+
+    // (function () { }())
+
+    //   // la crockford ( js the good parts)
+
+    //   ((function () { }()))
+
+    //   // unaria
+
+    //   + function () { }()
+
+    // //facebook
+
+    // !function () { }()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
